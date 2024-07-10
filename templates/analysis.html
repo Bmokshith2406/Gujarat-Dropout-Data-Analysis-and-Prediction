@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Welcome to Department Of Education Gujarat</title>
+  <head>
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analysis, as you like</title>
+    <link rel="shortcut icon" type="x-icon" href="{{ url_for('static', filename='img/GUJARAT_MAP.jpg') }}">
+    <link rel="shortcut icon" type="x-icon" href="{{ url_for('static', filename='img/analysis.svg') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style> 
+        hr { 
+            height: 8px; 
+            background: linear-gradient(to right, rgb(30, 27, 22), white, green,orange, white, green, orange, white, green); 
+	    border-radius: 20px;
+            border: 3px solid black; 
+            width: 100%;
+            margin-left: auto;
+        }
+    </style>
+    <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    nav {
+      height: 110px;
+      background: #ff8533;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0rem calc((100vw - 1300px) /2);
+    }
+    
+    .logo {
+      color: #000;
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-style: normal;
+      padding: 2rem;
+    }
+    
+    .Hell{
+      display: flex;
+      justify-content: center;
+      position: center;
+      align-items: center;
+      width:450px;
+    }
+    .me_image {
+      width:17%;
+      position: relative;
+      display: flex;
+      justify-self: center;
+    }    
+    
+    nav a {
+      font-size: 1.1rem;
+      text-decoration:none;
+      font-weight: bold;
+      font-style: normal;
+      color: #000;
+      padding: 1.2rem;
+      
+    }
+    
+    nav a:hover {
+      color: #ffeb99 ;
+    }
+    
+    .hero {
+      background: linear-gradient(to right,#FF9933,white,green);
+      padding-top: 30px;
+            
+    }
+    .hero-container {
+      display: grid;
+      height: 100vh;
+      padding: 3rem calc((100vw - 1300px) / 2);
+      padding-bottom: 900px;
+    
+    }
+    h1{
+      font-weight: bold;
+      font-size: large;
+      font-family: 'Times New Roman', Times, serif;
+      padding-top: 20px;
+    }
+    span{
+      font-size: 70px;
+      font-weight: bold;
+      color: #000;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .Orion1{
+        padding-top: 80px;
+        padding-bottom: 15px;
+    }
+    .Orion{
+        padding: 15px;
+    }
+    .key{
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      position: center;
+      width: 180px;
+      height: 60px;
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      border-radius: 30px;
+      color: black;
+      background:linear-gradient(to left,#ff9933,white,green);
+      text-align: center;
+      padding: auto;
+      border: solid #000;
+    }
+    .on{
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      position: center;
+      width: 180px;
+      height: 60px;
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      border-radius: 30px;
+      color: black;
+      background-color: #ff8533;
+      text-align: center;
+      padding: auto;
+      border: solid #000;
+    }
+    .School{
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      position: center;
+      width: 180px;
+      height: 60px;
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      border-radius: 30px;
+      color: black;
+      background-color: #ff8533;
+      text-align: center;
+      padding: auto;
+      border: solid #000;
+    }
+    .Area{
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      position: center;
+      width: 180px;
+      height: 60px;
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      border-radius: 30px;
+      color: black;
+      background-color: #ff8533;
+      text-align: center;
+      padding: auto;
+      border: solid #000;
+    }
+    .Category{
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      position: center;
+      width: 180px;
+      height: 60px;
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      border-radius: 30px;
+      color: black;
+      background-color: #ff8533;
+      text-align: center;
+      padding: auto;
+      border: solid #000;
+    }
+    .Option{
+      display: flex;  
+      margin:  auto;
+      justify-content: space-evenly;
+      position: absolute;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      color: black;
+      text-align: center; 
+    }
+    .Button{
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      position: center;
+      width: 180px;
+      height: 60px;
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      border-radius: 30px;
+      color: black;
+      background-color: #eee7e3;
+      text-align: center;
+      border: solid #000;
+      padding: 7px;
+    }
+    .Button:hover {
+  background: linear-gradient(to left,#FF9933,white,green);
+  color: black;
+}
+    
+
+    
+    h1{
+      font-family: times new roman,serif;
+      font-size: 48px;
+      font-style: italic;
+      font-weight: bold;
+      color: black;
+      text-decoration: underline;
+      text-decoration-color: green;
+      text-align: center;	
+    }
+    
+    @media screen and (max-width: 768px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    footer {
+        background-color:#ff8533 ;
+        color: #000;
+        text-align: center;
+        padding: 10px 0;
+        font-weight: bold;
+    }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Education Department <br> <h6> Government of Gujarat </h6> </div>
+      <a href="/" class="Hell">
+        <img src="{{url_for('static', filename='img/Ashok_Emblem_svg.svg')}}" alt=National Emblem class="me_image" />
+      </a>
+
+      <div class="nav-items">
+        <a href="/"> Home </a>
+	<a href="aboutus">About Us</a>
+	<a href="contact">Contact</a>
+	<a href="login">Login/Signup</a>
+      </div>
+    </nav>
+    <hr>
+    <section class="hero">
+	  <div class="hero-container">
+      <h1><span>"Single Source of Truth"</span><br>Key Performance Indicators</h1>
+
+
+      <form action="/analyse" method="post">
+        <div class="Orion1">
+          <select name="key" title="key" class="key" id="firstSelect" required >
+            <option class="Option"  disabled selected>Hierarchy</option>
+            <option class="Option" value="STATE">State</option>
+            <option class="Option" value="DISTRICT">District</option>
+            <option class="Option" value="AREA">Area</option>
+            <option class="Option" value="SCHOOL NAME">School Name</option>
+        </select>
+      </div>
+      <div class="Orion">
+        <select name="on" class="on" id="secondSelect" title="on" required>
+          <option class="Option" disabled selected>Select Key</option>
+        </select>
+        <script>
+            var states = ['Gujarat'];
+            var districts = ['AHEMEDABAD', 'GANDHI NAGAR', 'PORBANDAR', 'VADODARA'];
+            var areacodes = [500001, 500002, 500003, 500004, 500005, 500006, 500007, 500008];
+            var schools = ['AESTHETIC EDUCATIONAL SOCIETY', 'AHEMEDABAD HIGH SCHOOL', 'ARYA KANYA HIGH', 'BILLABONG MEMORIAL', 'BIRLA CHOUHAN SCHOOL', 'CASTLE COSMOS HIGH', 'CYGNUS HIGH SCHOOL', 'DAV HIGH SCHOOL', 'DELHI SCHOOL HIGH', 'GANDHI NAGAR MEMORIAL', 'GURUKUL SANDIPANI HIGH', "MARY'S LAND HIGH", 'NALANDA MEMORIAL', 'NAVARACHAN HIGH', 'PODAR HIGH SCHOOL', "SAINT JOSE'S HIGH", 'SCHOOL NEW TULIP', 'SHIKSHA NIKETHAN HIGH', 'SHRI GM SCHOOL', 'ZILLA PARISHAD  HIGH'];
+            $('#firstSelect').on('change', function() {
+                var selectedOption = $(this).val();
+                $('#secondSelect').empty();
+    
+                switch (selectedOption) {
+                    case 'STATE':
+                        $.each(states, function(index, value) {
+                            $('#secondSelect').append($('<option>', {value: value, text: value}));
+                        });
+                        break;
+                    case 'DISTRICT':
+                        $.each(districts, function(index, value) {
+                            $('#secondSelect').append($('<option>', {value: value, text: value}));
+                        });
+                        break;
+                    case 'AREA':
+                        $.each(areacodes, function(index, value) {
+                            $('#secondSelect').append($('<option>', {value: value, text: value}));
+                        });
+                        break;
+                    case 'SCHOOL NAME':
+                        $.each(schools, function(index, value) {
+                            $('#secondSelect').append($('<option>', {value: value, text: value}));
+                        });
+                  }
+            });
+
+        </script>
+      </div>
+
+      <div class="Orion">
+        <select name="category" class="Category" id="thirdSelect" title="category" required >
+            <option class="Option"  disabled selected>Category</option>
+
+            <option class="Option" value="all">All</option>
+            {% for category in categories %}
+            <option class="Option"  value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select>
+      </div>
+      <div class="Orion">
+        <button class="Button" type="submit">Analyse</button>
+      </div>
+
+    </form>
+        
+	  </div>	
+    </section>
+    <hr>
+    <footer>
+        <p>&copy; 2023 Education Department, Government of Gujarat.</p>
+    </footer>
+  </body>
+</html>

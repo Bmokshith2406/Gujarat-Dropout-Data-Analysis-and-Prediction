@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Welcome to Department Of Education Gujarat</title>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/predict.css')}}" />
+    <link rel="shortcut icon" type="x-icon" href="{{ url_for('static', filename='img/GUJARAT_MAP.jpg')}}">
+    <style>
+        hr {
+            height: 8px;
+            background: linear-gradient(to right, orange, white, green, orange, white, green, orange, white, green);
+            border-radius: 20px;
+            border: 3px solid black;
+            width: 100%;
+            margin-left: auto;
+
+        }
+    </style>
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Education Department <br>
+            <h6> Government of Gujarat </h6>
+        </div>
+        <img src="{{url_for('static', filename='img/Ashok_Emblem_svg.svg')}}" alt=National Emblem class="me_image" />
+        <div class="nav-items">
+            <a href="/">Home</a>
+            <a href="contact">Contact</a>
+            <a href="login">Login/Signup</a>
+            <a href="aboutus">About Us</a>
+          </div>
+    </nav>
+    <hr>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="GHI">
+                <h1>--: Prediction :--</h1>
+                <hr class="MEITSME">
+            </div>
+            <!-- <img class="graph" src="{{ url_for('static', filename='plot_single.png') }}" alt="plot"> -->
+            <form action="/prediction" method="post">
+                <div class="Main">
+                    <div class="Hello">
+                        <h5>Martial Status</h5>
+                    </div>
+                    <select name="marital_status" title="Marital_status" class="MaritalStatus" id="MS" required>
+                        <option class="option" value=1>Single</option>
+                        <option class="Option" value=2>Married</option>
+                        <option class="Option" value=3>Widower</option>
+                        <option class="Option" value=4>Divorced</option>
+                        <option class="Option" value=5>Facto Union</option>
+                        <option class="Option" value=6>Legally seperated</option>
+                    </select>
+                    <div class="Hello">
+                        <h5>Nationality</h5>
+                    </div>
+                    <select name="nationality" title="Nationlity_values" class="NationlityValues" id="NV"
+                        required>
+                        <option class="option" value=1>Portuguese</option>
+                        <option class="Option" value=2>German</option>
+                        <option class="Option" value=3>Spanish</option>
+                        <option class="Option" value=4>Italian</option>
+                        <option class="Option" value=5>INDIAN</option>
+                        <option class="Option" value=6>English</option>
+                        <option class="Option" value=7>Lithuanian</option>
+                        <option class="Option" value=8>Angolan</option>
+                        <option class="Option" value=9>Cape Verdean</option>
+                        <option class="Option" value=10>Guinean</option>
+                        <option class="Option" value=11>Mozambican</option>
+                        <option class="Option" value=12>Santomean</option>
+                        <option class="Option" value=13>Turkish</option>
+                        <option class="Option" value=14>Brazilian</option>
+                        <option class="Option" value=15>Romanian</option>
+                        <option class="Option" value=16>Moldova (Republic of)</option>
+                        <option class="Option" value=17>Mexican</option>
+                        <option class="Option" value=18>Ukrainian</option>
+                        <option class="Option" value=19>Russian</option>
+                        <option class="Option" value=20>Cuban</option>
+                        <option class="Option" value=21>Colombian</option>
+                    </select>
+                    <div class="Hello">
+                        <h5>Application mode</h5>
+                    </div>
+                    <select name="application_mode" title="Application_mode _values"
+                        class="ApplicationModeValues" id="AMV" required>
+                        <option class="option" value=1>1st phase—general contingent</option>
+                        <option class="Option" value=2>Ordinance No. 612/93</option>
+                        <option class="Option" value=3>1st phase—special contingent (Azores Island)</option>
+                        <option class="Option" value=4>Holders of other higher courses</option>
+                        <option class="Option" value=5>Ordinance No. 854-B/99</option>
+                        <option class="Option" value=6>International student (bachelor)</option>
+                        <option class="Option" value=7>1st phase—special contingent (Madeira Island)</option>
+                        <option class="Option" value=8>2nd phase—general contingent</option>
+                        <option class="Option" value=9>3rd phase—general contingent</option>
+                        <option class="Option" value=10>Ordinance No. 533-A/99, item b2 (Different Plan)
+                        <option>
+                        <option class="Option" value=11>Ordinance No. 533-A/99, item b3 (Other Institution)</option>
+                        <option class="Option" value=12>Over 23 years old</option>
+                        <option class="Option" value=13>Transfer</option>
+                        <option class="Option" value=14>Change in course</option>
+                        <option class="Option" value=15>Technological specialization diploma holders</option>
+                        <option class="Option" value=16>Change in institution/course</option>
+                        <option class="Option" value=17>Short cycle diploma holders</option>
+
+                        <option class="Option" value=18>Change in institution/course (International)</option>
+                    </select>
+
+                    
+
+                    <div class="Hello">
+                        <h5>Course</h5>
+                    </div>
+                    <select name="course" title="Course_values" class="CourseValues" id="CV" required>
+                        <option class="option" value=1>Biofuel Production Technologies</option>
+                        <option class="Option" value=2>Animation and Multimedia Design</option>
+                        <option class="Option" value=3>Social Service (evening attendance)</option>
+                        <option class="Option" value=4>Agronomy</option>
+                        <option class="Option" value=5>Communication Design</option>
+                        <option class="Option" value=6>Veterinary Nursing</option>
+                        <option class="Option" value=7>Informatics Engineering</option>
+                        <option class="Option" value=8>Equiniculture</option>
+                        <option class="Option" value=9>Management</option>
+                        <option class="Option" value=10>Social Service</option>
+                        <option class="Option" value=11>Tourism</option>
+                        <option class="Option" value=12>Nursing</option>
+                        <option class="Option" value=13>Oral Hygiene</option>
+                        <option class="Option" value=14>Advertising and Marketing Management</option>
+                        <option class="Option" value=15>Journalism and Communication</option>
+                        <option class="Option" value=16>Basic Education</option>
+                        <option class="Option" value=17>Management (evening attendance)</option>
+                    </select>
+                    <div class="Hello">
+                        <h5>Previous Qualifications</h5>
+                    </div>
+                    <select name="previous_qualification" title="Previous_qualification_values"
+                        class="Previousqualificationvalues" id="PQV" required>
+                        <option class="option" value=1>Secondary education</option>
+                        <option class="Option" value=2>Higher education—bachelor's degree</option>
+                        <option class="Option" value=3>Higher education—degree</option>
+                        <option class="Option" value=4>Higher education—master's degree</option>
+                        <option class="Option" value=5>Higher education—doctorate</option>
+                        <option class="Option" value=6>Frequency of higher education</option>
+                        <option class="Option" value=7>12th year of schooling—not completed</option>
+                        <option class="Option" value=8>11th year of schooling—not completed</option>
+                        <option class="Option" value=9>Other—11th year of schooling</option>
+                        <option class="Option" value=10>10th year of schooling</option>
+                        <option class="Option" value=11>10th year of schooling—not completed</option>
+                        <option class="Option" value=12>Basic education 3rd cycle (9th/10th/11th year) or equivalent
+                        </option>
+                        <option class="Option" value=13>Basic education 2nd cycle (6th/7th/8th year) or equivalent
+                        </option>
+                        <option class="Option" value=14>Technological specialization course</option>
+                        <option class="Option" value=15>Higher education—degree (1st cycle)</option>
+                        <option class="Option" value=16>Professional higher technical course</option>
+                        <option class="Option" value=17>Higher education—master's degree (2nd cycle)</option>
+                    </select>
+                    <div class="Hello">
+                        <h5>Mother's Qualification</h5>
+                    </div>
+                    <select name="mothers_qual" title="Mother's_values"
+                        class="MothersAndFathersValues" id="MV" required>
+                        <option class="option" value=1>Secondary Education—12th Year of Schooling or Equivalent</option>
+                        <option class="Option" value=2>Higher Education—bachelor's degree</option>
+                        <option class="Option" value=3>Higher Education—degree</option>
+                        <option class="Option" value=4>Higher education—master's degree</option>
+                        <option class="Option" value=5>Higher education—doctorate</option>
+                        <option class="Option" value=6>Frequency of higher education</option>
+                        <option class="Option" value=7>12th year of schooling—not completed</option>
+                        <option class="Option" value=8>11th year of schooling—not completed</option>
+                        <option class="Option" value=9>7th Year (Old)</option>
+                        <option class="Option" value=10>Other—11th Year of Schooling</option>
+                        <option class="Option" value=11>2nd year complementary high school course
+                        </option>
+                        <option class="Option" value=12>10th Year of Schooling
+                        </option>
+                        <option class="Option" value=13>General commerce course</option>
+                        <option class="Option" value=14>Basic Education 3rd Cycle (9th/10th/11th Year) or Equivalent
+                        </option>
+                        <option class="Option" value=15>Complementary High School Course
+                        </option>
+                        <option class="Option" value=16>Technical-professional course</option>
+                        <option class="Option" value=17>Complementary High School Course—not concluded
+                        </option>
+                        <option class="option" value=18>7th year of schooling</option>
+                        <option class="Option" value=19>2nd cycle of the general high school course</option>
+                        <option class="Option" value=20>9th Year of Schooling—not completed
+                        </option>
+                        <option class="Option" value=21>8th year of schooling</option>
+                        <option class="Option" value=22>General Course of Administration and Commerce</option>
+                        <option class="Option" value=23>Supplementary Accounting and Administration
+                        </option>
+                        <option class="Option" value=24>Unknown</option>
+                        <option class="Option" value=25>Cannot read or write</option>
+                        <option class="Option" value=26>Can read without having a 4th year of schooling</option>
+                        <option class="Option" value=27>Basic education 1st cycle (4th/5th year) or equivalent</option>
+                        <option class="Option" value=28>Basic Education 2nd Cycle (6th/7th/8th Year) or equivalent
+                        </option>
+                        <option class="Option" value=29>Technological specialization course</option>
+                        <option class="Option" value=30>Higher education—degree (1st cycle)
+                        </option>
+                        <option class="Option" value=31>Specialized higher studies course
+                        </option>
+                        <option class="Option" value=32>Professional higher technical course
+                        </option>
+                        <option class="Option" value=33>Higher Education—master's degree (2nd cycle)</option>
+                        <option class="Option" value=34>Higher Education—doctorate (3rd cycle)
+                        </option>
+                    </select>
+                    <div class="Hello">
+                        <h5>Father's Qualification</h5>
+                    </div>
+                    <select name="fathers_qual" title="Father's_values"
+                        class="MothersAndFathersValues" id="FV" required>
+                        <option class="option" value=1>Secondary Education—12th Year of Schooling or Equivalent</option>
+                        <option class="Option" value=2>Higher Education—bachelor's degree</option>
+                        <option class="Option" value=3>Higher Education—degree</option>
+                        <option class="Option" value=4>Higher education—master's degree</option>
+                        <option class="Option" value=5>Higher education—doctorate</option>
+                        <option class="Option" value=6>Frequency of higher education</option>
+                        <option class="Option" value=7>12th year of schooling—not completed</option>
+                        <option class="Option" value=8>11th year of schooling—not completed</option>
+                        <option class="Option" value=9>7th Year (Old)</option>
+                        <option class="Option" value=10>Other—11th Year of Schooling</option>
+                        <option class="Option" value=11>2nd year complementary high school course
+                        </option>
+                        <option class="Option" value=12>10th Year of Schooling
+                        </option>
+                        <option class="Option" value=13>General commerce course</option>
+                        <option class="Option" value=14>Basic Education 3rd Cycle (9th/10th/11th Year) or Equivalent
+                        </option>
+                        <option class="Option" value=15>Complementary High School Course
+                        </option>
+                        <option class="Option" value=16>Technical-professional course</option>
+                        <option class="Option" value=17>Complementary High School Course—not concluded
+                        </option>
+                        <option class="option" value=18>7th year of schooling</option>
+                        <option class="Option" value=19>2nd cycle of the general high school course</option>
+                        <option class="Option" value=20>9th Year of Schooling—not completed
+                        </option>
+                        <option class="Option" value=21>8th year of schooling</option>
+                        <option class="Option" value=22>General Course of Administration and Commerce</option>
+                        <option class="Option" value=23>Supplementary Accounting and Administration
+                        </option>
+                        <option class="Option" value=24>Unknown</option>
+                        <option class="Option" value=25>Cannot read or write</option>
+                        <option class="Option" value=26>Can read without having a 4th year of schooling</option>
+                        <option class="Option" value=27>Basic education 1st cycle (4th/5th year) or equivalent</option>
+                        <option class="Option" value=28>Basic Education 2nd Cycle (6th/7th/8th Year) or equivalent
+                        </option>
+                        <option class="Option" value=29>Technological specialization course</option>
+                        <option class="Option" value=30>Higher education—degree (1st cycle)
+                        </option>
+                        <option class="Option" value=31>Specialized higher studies course
+                        </option>
+                        <option class="Option" value=32>Professional higher technical course
+                        </option>
+                        <option class="Option" value=33>Higher Education—master's degree (2nd cycle)</option>
+                        <option class="Option" value=34>Higher Education—doctorate (3rd cycle)
+                        </option>
+                    </select>
+
+                    <div class="Hello">
+                        <h5>Mother's Occupation</h5>
+                    </div>
+                    <select name="mothers_occ" title="Mother's_occupation"
+                        class="MothersAndFathersOccupation" id="MO" required>
+                        <option class="option" value=1>Student</option>
+                        <option class="Option" value=2>Representatives of the Legislative Power and Executive Bodies,
+                            Directors, Directors and Executive Managers</option>
+                        <option class="Option" value=3>Specialists in Intellectual and Scientific Activities
+                        </option>
+                        <option class="Option" value=4>Intermediate Level Technicians and Professions
+                        </option>
+                        <option class="Option" value=5>Administrative staff</option>
+                        <option class="Option" value=6>Personal Services, Security and Safety Workers, and Sellers
+                        </option>
+                        <option class="Option" value=7>Farmers and Skilled Workers in Agriculture, Fisheries,
+                            and Forestry
+                        </option>
+                        <option class="Option" value=8>Skilled Workers in Industry, Construction, and Craftsmen</option>
+                        <option class="Option" value=9>Installation and Machine Operators and Assembly Workers</option>
+                        <option class="Option" value=10>Unskilled Workers</option>
+                        <option class="Option" value=11>Armed Forces Professions
+                        </option>
+                        <option class="Option" value=12>Other Situation; 13—(blank)
+                        </option>
+                        <option class="Option" value=13>Armed Forces Officers</option>
+                        <option class="Option" value=14>Armed Forces Sergeants</option>
+                        <option class="Option" value=15>Other Armed Forces personnel
+                        </option>
+                        <option class="Option" value=16>Directors of administrative and commercial services</option>
+                        <option class="Option" value=17>Hotel, catering, trade, and other services directors
+                        </option>
+                        <option class="option" value=18>Specialists in the physical sciences, mathematics, engineering,
+                            and related techniques
+                        </option>
+                        <option class="Option" value=19>Health professionals
+                        </option>
+                        <option class="Option" value=20>Teachers
+
+                        </option>
+                        <option class="Option" value=21>Specialists in finance, accounting, administrative organization,
+                            and public and commercial relations
+                        </option>
+                        <option class="Option" value=22>Intermediate level science and engineering technicians
+                            and professions</option>
+                        <option class="Option" value=23>Technicians and professionals of intermediate level of health
+
+                        </option>
+                        <option class="Option" value=24>Intermediate level technicians from legal, social, sports,
+                            cultural,
+                            and similar services</option>
+                        <option class="Option" value=25>Information and communication technology technicians</option>
+                        <option class="Option" value=26>Office workers, secretaries in general,and data processing
+                            operators</option>
+                        <option class="Option" value=27>Data, accounting, statistical, financial services, and
+                            registry-related operators</option>
+                        <option class="Option" value=28>Other administrative support staff
+                        </option>
+                        <option class="Option" value=29>Personal service workers</option>
+                        <option class="Option" value=30>Sellers
+                        </option>
+                        <option class="Option" value=31>Personal care workers and the like
+                        </option>
+                        <option class="Option" value=32>Protection and security services personnel
+                        </option>
+                        <option class="Option" value=33>Market-oriented farmers and skilled agricultural and animal
+                            production workers</option>
+                        <option class="Option" value=34>Farmers, livestock keepers, fishermen, hunters and gatherers,
+                            and subsistence
+                        </option>
+                        <option class="Option" value=35>Skilled construction workers and the like, except electricians
+                        </option>
+                        <option class="Option" value=36>Skilled workers in metallurgy, metalworking, and similar
+
+                        </option>
+                        <option class="Option" value=37>Skilled workers in electricity and electronics</option>
+                        <option class="Option" value=38>Workers in food processing, woodworking, and clothing and
+                            other industries and crafts
+                        </option>
+                        <option class="Option" value=39>Fixed plant and machine operators
+                        </option>
+                        <option class="Option" value=40>Assembly workers
+                        </option>
+                        <option class="Option" value=41>Vehicle drivers and mobile equipment operators
+                        </option>
+                        <option class="Option" value=42>Unskilled workers in agriculture, animal production, and
+                            fisheries and forestry</option>
+                        <option class="Option" value=43>Unskilled workers in extractive industry, construction,
+                            manufacturing, and transport
+                        </option>
+                        <option class="Option" value=44>Meal preparation assistants
+                        </option>
+                        <option class="Option" value=45>Street vendors (except food) and street service providers
+                    </select>
+
+                    <div class="Hello">
+                        <h5>Father's Occupation</h5>
+                    </div>
+                    <select name="fathers_occ" title="Father's_occupation"
+                        class="MothersAndFathersOccupation" id="FO" required>
+                        <option class="option" value=1>Student</option>
+                        <option class="Option" value=2>Representatives of the Legislative Power and Executive Bodies,
+                            Directors, Directors and Executive Managers</option>
+                        <option class="Option" value=3>Specialists in Intellectual and Scientific Activities
+                        </option>
+                        <option class="Option" value=4>Intermediate Level Technicians and Professions
+                        </option>
+                        <option class="Option" value=5>Administrative staff</option>
+                        <option class="Option" value=6>Personal Services, Security and Safety Workers, and Sellers
+                        </option>
+                        <option class="Option" value=7>Farmers and Skilled Workers in Agriculture, Fisheries,
+                            and Forestry
+                        </option>
+                        <option class="Option" value=8>Skilled Workers in Industry, Construction, and Craftsmen</option>
+                        <option class="Option" value=9>Installation and Machine Operators and Assembly Workers</option>
+                        <option class="Option" value=10>Unskilled Workers</option>
+                        <option class="Option" value=11>Armed Forces Professions
+                        </option>
+                        <option class="Option" value=12>Other Situation; 13—(blank)
+                        </option>
+                        <option class="Option" value=13>Armed Forces Officers</option>
+                        <option class="Option" value=14>Armed Forces Sergeants</option>
+                        <option class="Option" value=15>Other Armed Forces personnel
+                        </option>
+                        <option class="Option" value=16>Directors of administrative and commercial services</option>
+                        <option class="Option" value=17>Hotel, catering, trade, and other services directors
+                        </option>
+                        <option class="option" value=18>Specialists in the physical sciences, mathematics, engineering,
+                            and related techniques
+                        </option>
+                        <option class="Option" value=19>Health professionals
+                        </option>
+                        <option class="Option" value=20>Teachers
+
+                        </option>
+                        <option class="Option" value=21>Specialists in finance, accounting, administrative organization,
+                            and public and commercial relations
+                        </option>
+                        <option class="Option" value=22>Intermediate level science and engineering technicians
+                            and professions</option>
+                        <option class="Option" value=23>Technicians and professionals of intermediate level of health
+
+                        </option>
+                        <option class="Option" value=24>Intermediate level technicians from legal, social, sports,
+                            cultural,
+                            and similar services</option>
+                        <option class="Option" value=25>Information and communication technology technicians</option>
+                        <option class="Option" value=26>Office workers, secretaries in general,and data processing
+                            operators</option>
+                        <option class="Option" value=27>Data, accounting, statistical, financial services, and
+                            registry-related operators</option>
+                        <option class="Option" value=28>Other administrative support staff
+                        </option>
+                        <option class="Option" value=29>Personal service workers</option>
+                        <option class="Option" value=30>Sellers
+                        </option>
+                        <option class="Option" value=31>Personal care workers and the like
+                        </option>
+                        <option class="Option" value=32>Protection and security services personnel
+                        </option>
+                        <option class="Option" value=33>Market-oriented farmers and skilled agricultural and animal
+                            production workers</option>
+                        <option class="Option" value=34>Farmers, livestock keepers, fishermen, hunters and gatherers,
+                            and subsistence
+                        </option>
+                        <option class="Option" value=35>Skilled construction workers and the like, except electricians
+                        </option>
+                        <option class="Option" value=36>Skilled workers in metallurgy, metalworking, and similar
+
+                        </option>
+                        <option class="Option" value=37>Skilled workers in electricity and electronics</option>
+                        <option class="Option" value=38>Workers in food processing, woodworking, and clothing and
+                            other industries and crafts
+                        </option>
+                        <option class="Option" value=39>Fixed plant and machine operators
+                        </option>
+                        <option class="Option" value=40>Assembly workers
+                        </option>
+                        <option class="Option" value=41>Vehicle drivers and mobile equipment operators
+                        </option>
+                        <option class="Option" value=42>Unskilled workers in agriculture, animal production, and
+                            fisheries and forestry</option>
+                        <option class="Option" value=43>Unskilled workers in extractive industry, construction,
+                            manufacturing, and transport
+                        </option>
+                        <option class="Option" value=44>Meal preparation assistants
+                        </option>
+                        <option class="Option" value=45>Street vendors (except food) and street service providers
+                    </select>
+
+                    <div>
+
+                        <div class="Hello">
+                            <h5>Age at Enrollment</h5>
+                        </div>
+                        <div class="Hi"><input type="number" id="age_at_enroll"
+                                name="age_at_enrollment" min=16 max= 100 class="AIn" placeholder=16 required>
+                        </div>
+
+                        <div class="Hello">
+                            <h5>Gender values</h5>
+                        </div>
+                        <div class="Hell">
+                            <input type="radio" id="M" name="gender" value=1>
+                            <label for="M">Male</label>
+                            <input type="radio" id="F" name="gender" value=0>
+                            <label for="F">Female</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Hello">
+                            <h5>Attendance Regime Values</h5>
+                        </div>
+                        <div class="Hell">
+                            <input type="radio" id="D" name="att_regime" value=1>
+                            <label for="D">Daytime</label>
+                            <input type="radio" id="E" name="att_regime" value=0>
+                            <label for="E">Evening</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Hello">
+                            <h5>Displaced</h5>
+                        </div>
+                        <div class="Hell">
+                            <input type="radio" id="Y" name="displaced" value=1>
+                            <label for="Y">Yes</label>
+                            <input type="radio" id="N" name="displaced" value=0 >
+                            <label for="N">No</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Hello">
+                            <h5>Educational Special Needs</h5>
+                        </div>
+                        <div class="Hell">
+                            <input title="ed_sp_needs" type="radio" id="YS" name="educational_special_needs" value=1 >
+                            <label for="Y">Yes</label>
+                            <input title="ed_sp_needs" type="radio" id="NS" name="educational_special_needs" value=0 >
+                            <label for="N">No</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Hello">
+                            <h5>Debtor</h5>
+                        </div>
+                        <div class="Hell">
+                            <input title="debtor" type="radio" id="YA" name="debtor" value=1 >
+                            <label for="Y">Yes</label>
+                            <input title="debtor" type="radio" id="NA" name="debtor" value=0 >
+                            <label for="N">No</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Hello"><h5>Tuition Fees Up to Date</h5>
+                        </div>
+                        <div class="Hell">
+                            <input title="tuition_fee" type="radio" id="YD" name="tuition_fee_upto_date" value=1>
+                            <label for="Y">Yes</label>
+                            <input title="tuition_fee" type="radio" id="ND" name="tuition_fee_upto_date" value=0 >
+                            <label for="N">No</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Hello">
+                            <h5>Scholarship Holder</h5>
+                        </div>
+                        <div class="Hell">
+                            <input title="Scholarship" type="radio" id="YQ" name="scholarship_holder" value=1>
+                            <label for="Y">Yes</label>
+                            <input title="Scholarship" type="radio" id="NQ" name="scholarship_holder" value=0 >
+                            <label for="N">No</label>
+                        </div>
+                    </div>
+
+                    
+
+                    <div>
+                        <div class="Hello">
+                            <h5>International</h5>
+                        </div>
+                        <div class="Hell">
+                            <input title="international" type="radio" id="YW" name="international" value=1>
+                            <label for="Y">Yes</label>
+                            <input title="international" type="radio" id="NW" name="international" value=0 >
+                            <label for="N">No</label>
+                        </div>  
+                    </div>
+                </div>
+                <div class="Main1">
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-1 (Credited)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU1C" name="cu_1sem_cred" min=0 class="AIn"
+                            max=21 placeholder=0 required></div>
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-1 (Enrolled)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU1E" name="cu_1sem_enrolld" min=0 class="AIn"
+                            max=27 placeholder=0 required></div>
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-1 (Evaluations)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU1ev" name="cu_1sem_eval" min=0 class="AIn"
+                            max=46 placeholder=0 required></div>
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-1 (Approved)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU1ap" name="cu_1sem_approved" min=0 class="AIn"
+                            max=46 placeholder=0 required></div>
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-1 (Grade)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU1gr" name="cu_1sem_grade" min=0 max=14 class="AIn"
+                            placeholder=0 required></div>
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-1 (Without Evaluations)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU1we"
+                            name="cu_1sem_without_eval" min=0 max=13 class="AIn" placeholder=0 required>
+                    </div>
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-2 (Credited)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU2cr" name="cu_2sem_cred" min=0 class="AIn"
+                            max=13 placeholder=0 required></div>
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-2 (Enrolled)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU2cSr" name="cu_2sem_enrolld" min=0 class="AIn"
+                            max=13 placeholder=0 required></div>
+
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-2 (Evaluations)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU2ev" name="cu_2sem_eval" min=0 class="AIn"
+                            max=46 placeholder=0 required></div>
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-2 (Approved)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU2ap" name="cu_2sem_approved" min=0 class="AIn"
+                            max=46 placeholder=0 required></div>
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-2 (Grade)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU2gr" name="cu_2sem_grade" min=0 max=14 class="AIn"
+                            placeholder=0 required></div>
+                    <div class="Hello">
+                        <h5>Curricular Units SEM-2 (Without Evaluations)</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="CU2we"
+                            name="cu_2sem_without_eval" min=0 max=13 class="AIn" placeholder=0 required>
+                    </div>
+
+                    <div class="Hello">
+                        <h5>Unemployment Rate</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="unemp_r" name="unemployment_rate" min=0 class="AIn"
+                            max=46 placeholder=0 required></div>
+                    <div class="Hello">
+                        <h5>Inflation Rate</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="infln_r" name="inflation_rate" min=-14 max=14 class="AIn"
+                            placeholder=0 required></div>
+                    <div class="Hello">
+                        <h5>GDP</h5>
+                    </div>
+                    <div class="Hi"><input type="number" id="GPD"
+                            name="gdp" min=-20 max=20 placeholder=0  class="AIn" required>
+                    </div>
+
+                    <div class="Hello">
+                    <div class="Hello12"><input type="submit"></div>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <footer>
+            <p>&copy; 2023 Education Department, Government of Gujarat.</p>
+        </footer>
+</body>
+
+</html>

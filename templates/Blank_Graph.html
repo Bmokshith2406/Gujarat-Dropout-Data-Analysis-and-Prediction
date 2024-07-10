@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Welcome to Department Of Education Gujarat</title>
+  <head>
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Blank_Graph.css') }}" />
+    <link rel="shortcut icon" type="x-icon" href="{{ url_for('static', filename='img/GUJARAT_MAP.jpg') }}">
+    <style> 
+        hr { 
+            height: 8px; 
+            background: linear-gradient(to right, orange, white, green,orange, white, green, orange, white, green); 
+	          border-radius: 20px;
+            border: 3px solid black; 
+            width: 100%;
+            margin-left: auto;
+        } 
+    </style>
+    <script>
+      window.addEventListener("load", () => {
+        const preloader=document.querySelector("#preloader");
+        preloader.classList.add("preloader--hidden");
+        document.querySelector("#preloader").addEventListener("transitioned", () => {
+          document.body.removeChild(document.querySelector("#preloader"));
+        });
+
+      })
+    </script>
+  </head>
+  <body>
+    <div id="preloader preloader--hidden"></div>
+    <nav>
+      <div class="logo">Education Department <br> <h6> Government of Gujarat </h6> </div>
+      <img src="{{url_for('static', filename='img/Ashok_Emblem_svg.svg')}}" alt=National Emblem class="me_image" />
+      <div class="nav-items">
+        <a href="/">Home</a>
+        <a href="contact">Contact</a>
+        <a href="login">Login/Signup</a>
+        <a href="aboutus">About Us</a>
+      </div>
+    </nav>
+    <hr>
+    <section class="hero">
+      <div class="hero-container">
+          <img class="graph" src="{{ url_for('static', filename='plot_single.png') }}" alt="plot">
+      </div>
+
+    <hr>
+    <footer>
+        <p>&copy; 2023 Education Department, Government of Gujarat.</p>
+    </footer>
+  </body>
+</html>

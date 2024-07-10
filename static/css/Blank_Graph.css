@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  nav {
+    height: 110px;
+    background: #ff8533;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) /2);
+  }
+  
+  .logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: normal;
+    padding: 2rem;
+  }
+  
+  .me_image {
+    width:5.5%;
+  }  
+  
+  nav a {
+    font-size: 1.1rem;
+    text-decoration:none;
+    font-weight: bold;
+    font-style: normal;
+    color: #000;
+    padding: 1.5rem;
+    
+  }
+  
+  nav a:hover {
+    color: #ffeb99 ;
+  }
+  
+  .logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: normal;
+    padding: 2rem;
+  }
+  
+  .me_image {
+    width: 5.5%;
+  }    
+
+  
+  
+  .hero {
+    background: linear-gradient(to right,#FF9933,white,green);
+  }
+  
+  .hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+  
+  }
+  .graph{
+    border: 10px solid #ff8533 ;
+    padding: 10px;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  footer {
+      background-color:#ff8533 ;
+      color: #000;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: bold;
+  }
+  
+  #preloader{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to right, orange,white,green);
+        transition: opacity 0.75s, visiblility 0.75s ;
+  }
+  #preloader--hidden{
+    opacity: 0;
+    visibility: hidden;
+  }
+  #preloader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border:15px solid #ff8533;
+    border-top-color: #000080;
+    border-radius: 50%  ;
+    animation: loading 0.75s ease infinite;
+  }
+  @keyframes loading {
+    from { transform: rotate(0turn) }
+    to { transform: rotate(1turn) }
+  }

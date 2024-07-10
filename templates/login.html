@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Login | Signup</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
+      <link rel="shortcut icon" type="x-icon" href="{{ url_for('static', filename='img/login.png')}}">
+      <script>
+         window.addEventListener("load", () => {
+           const preloader=document.querySelector("#preloader");
+           preloader.classList.add("preloader--hidden");
+           document.querySelector("#preloader").addEventListener("transitioned", () => {
+             document.body.removeChild(document.querySelector("#preloader"));
+           });
+         })
+       </script>
+   </head>
+   <body>
+      <div id="preloader preloader--hidden"></div>
+      <nav>
+         <div class="logo">Education Department <br> <h6> Government of Gujarat </h6> </div>
+         <a href="/" class="Hell">
+            <img src="{{url_for('static', filename='img/Ashok_Emblem_svg.svg')}}" alt=National Emblem class="me_image" />
+          </a>
+         <div class="nav-items">
+           <a href="/"> Home </a>
+           <a href="aboutus">About Us</a>
+           <a href="contact">Contact</a>
+         </div>
+      </nav>
+      <div class="wrapper">
+         <div class="title">
+            Login Form
+         </div>
+         <form action="#">
+            <div class="field">
+               <input title="email" type="text" required>
+               <label>Email Address</label>
+            </div>
+            <div class="field">
+               <input title ="password" type="password" required>
+               <label>Password</label>
+            </div>
+            <div class="content">
+               <div class="checkbox">
+                  <input type="checkbox" id="remember-me">
+                  <label for="remember-me">Remember me</label>
+               </div>
+               <div class="pass-link">
+                  <a href="#">Forgot password?</a>
+               </div>
+            </div>
+            <div class="field">
+               <input type="submit" value="Login">
+            </div>
+            <div class="signup-link">
+               Not a member? <a href="#">Signup now</a>
+            </div>
+         </form>
+      </div>
+     <footer>
+        <p>&copy; 2023 Education Department, Government of Gujarat.</p>
+    </footer>
+   </body>
+</html>

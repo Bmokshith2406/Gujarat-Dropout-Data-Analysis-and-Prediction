@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+nav {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem calc((100vw - 1300px) /2);
+  padding-bottom: 80px;
+  padding-top: 70px;
+}
+
+.logo {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: normal;
+  padding: 2rem;
+  
+}
+
+.Hell{
+  display: flex;
+  justify-content: center;
+  position: center;
+  align-items: center;
+  width:550px;
+
+
+}
+.me_image {
+  width:13%;
+  position: relative;
+  display: flex;
+  justify-self: center;
+}      
+
+nav a {
+  font-size: 1.1rem;
+  text-decoration:none;
+  font-weight: bold;
+  font-style: normal;
+  color: #000;
+  padding: 1.5rem;
+	
+}
+
+nav a:hover {
+  color: #ffeb99 ;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+  padding-bottom: 20px;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(to right,orange,white,green);
+}
+::selection{
+  background: #4158d0;
+  color: #fff;
+}
+.wrapper{
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px #000;
+  line-height: 100px;
+  color: #ff8533;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(to left,green,white,orange);
+}
+.wrapper form{
+  padding: 10px 30px 50px 30px;
+}
+.wrapper form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  text-shadow: 1.5px 1.5px #000;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid{
+  border-color: #ff8533;
+}
+.wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #ff8533;
+  background: #fff;
+  transform: translateY(-50%);
+}
+form .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .content input{
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .content .pass-link{
+  color: "";
+}
+form .field input[type="submit"]{
+  color: #ff8533;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(to right,orange,white,green);
+  transition: all 0.3s ease;
+}
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+form .signup-link{
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .pass-link a,
+form .signup-link a{
+  color: #ff8533;
+  text-decoration: none;
+}
+form .pass-link a:hover,
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+footer {
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+#preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, orange,white,green);
+  transition: opacity 0.75s, visiblility 0.75s ;
+}
+#preloader--hidden{
+opacity: 0;
+visibility: hidden;
+}
+#preloader::after {
+content: "";
+width: 75px;
+height: 75px;
+border:15px solid #ff8533;
+border-top-color: #000080;
+border-radius: 50%  ;
+animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+from { transform: rotate(0turn) }
+to { transform: rotate(1turn) }
+}

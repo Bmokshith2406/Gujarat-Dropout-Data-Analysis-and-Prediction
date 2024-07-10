@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  height: 110px;
+  background: #ff8533 ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem calc((100vw - 1300px) /2);
+}
+
+.logo {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: normal;
+  padding: 2rem;
+}
+.Hell{
+  display: flex;
+  justify-content: center;
+  position: center;
+  align-items: center;
+  width:550px;
+
+
+}
+.me_image {
+  width:13%;
+  position: relative;
+  display: flex;
+  justify-self: center;
+}    
+
+nav a {
+  font-size: 1.1rem;
+  text-decoration:none;
+  font-weight: bold;
+  font-style: normal;
+  color: #000;
+  padding: 1.5rem;
+	
+}
+
+nav a:hover {
+  color: #ffeb99 ;
+}
+
+.hero {
+  background: linear-gradient(to right,#FF9933,white,green);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 95vh;
+  padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #000;
+  padding: 0rem 2rem;
+}
+
+.column-left h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.column-left p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  border: none;
+  color: #E6E6FA;
+  background: black;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+
+button:hover {
+  background: #ff8533;
+  color: #fff;
+  
+}
+
+.column-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 2rem;
+}
+
+.hero-image {
+  width: 80%;
+  height: 90%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+}
+footer {
+    background-color:#ff8533 ;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+#preloader{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, orange,white,green);
+      transition: opacity 0.75s, visiblility 0.75s ;
+}
+#preloader--hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+#preloader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border:15px solid #ff8533;
+  border-top-color: #000080;
+  border-radius: 50%  ;
+  animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+  from { transform: rotate(0turn) }
+  to { transform: rotate(1turn) }
+}
